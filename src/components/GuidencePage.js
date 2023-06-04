@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {userContext} from '../UserContext';
 import { Button } from "@mui/material";
@@ -8,13 +8,24 @@ export default function GuidencePage(){
 
     const nameCtx=useContext(userContext);
     const navigate=useNavigate()
-
+    const [time,setTime]=useState("");
+   
+    function TimeOfDay() {
+        const currentHour = new Date().getHours();
+        if (currentHour >= 6 && currentHour < 12) {
+         setTime("בוקר טוב")
+        } else if (currentHour >= 12 && currentHour < 18) {
+            setTime("צהרים טובים")
+        } else {
+            setTime("ערב טוב")
+        }
+      }
     return(
-        <div className="direct row div-location padd" >
+        <div  className="direct row div-location padd" >
+            <TimeOfDay/>
             <div className="m-3">
-                <h4  style={{color:" rgb(22, 248, 233)"}}>שלום {nameCtx.firstName}  {nameCtx.lastName}!</h4>
+                <h4  style={{color:" rgb(22, 248, 233)"}}>{time} {nameCtx.firstName}  {nameCtx.lastName}!</h4>
             להלן הנחיות למילוי הטופס:<br/>
-           
             </div>
             <p className="m-1">
              בטופס תתבקש/י למלא את פרטיך ופרטי ילדיך.<br/>
@@ -38,5 +49,6 @@ export default function GuidencePage(){
             </div>
             <Button style={{color:" rgb(22, 248, 233)"}} variant="text" size="large" onClick={()=>navigate('/')}>חזרה לטופס</Button>
         </div>
+        
     )
 }
