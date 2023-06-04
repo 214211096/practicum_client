@@ -104,11 +104,11 @@ export default function Form(){
                 
             <hr/>
             <div>
-                <div className="direct mb-3 d-flex justify-content-start">
-                    <ul className="list-inline">
+                <div className="direct mb-3 d-flex justify-content-start" >
+                    <ul className="list-inline" >
                         {detailsCtx.children.map((c,index)=>  
                         <li key={index} className="list-block-item p-2">
-                            <span className="badge bg-primary rounded-pill m-2">{index+1}</span>
+                            <span className="badge  rounded-pill m-2" style={{backgroundColor:" rgb(22, 248, 233)"}}>{index+1}</span>
                             {c.name}
                         </li> 
                         )}

@@ -40,9 +40,7 @@ export default function AddChild(){
                     </div> 
                 </div>
                 {errors.idNumber && <p className="invalid-field text-primary-emphasis">מספר הזהות אינו תקין</p>} 
-                {/* {errors?.idNumber?.minLength && <p className="invalid-field text-primary-emphasis">מספר הזהות אינו תקין</p>}
-                {errors?.idNumber?.maxLength && <p className="invalid-field text-primary-emphasis">מספר הזהות אינו תקין</p>}
-                {errors.idNumber?.required && <p className="invalid-field text-primary-emphasis">זהו שדה חובה</p>} */}
+                
             </div>
 
             <div className="col mb-2 p-4">

@@ -38,7 +38,7 @@ function App() {
         
       <nav className="navbar navbar-dark  fixed-bottom" >
           <div className="container-fluid " style={{backgroundColor:" rgb(22, 248, 233)"}}>
-            <label className="navbar-brand" style={{color:"black",height:"30px"}}> </label>
+            <label className="navbar-brand" style={{color:"black",height:"40px"}}> </label>
             <p style={{position:"absolute",right:"50%"}}>
             
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16" >
